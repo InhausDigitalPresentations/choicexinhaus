@@ -227,7 +227,7 @@ h2.wide { max-width: 18ch; margin-bottom: clamp(46px, 7vh, 82px); }
 .founders { overflow: hidden; margin-bottom: clamp(48px, 8vh, 88px); }
 .founders.reveal-img { clip-path: none; }
 .founders.reveal-img img { transform: none; }
-.founders img { display: block; width: 100%; height: auto; object-fit: contain; }
+.founders img { display: block; width: 100%; aspect-ratio: 2100 / 1180; height: auto; object-fit: contain; }
 .why-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(36px, 6vw, 90px); align-items: start; }
 .why-grid .lead { max-width: 32ch; }
 .founders-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -465,7 +465,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--champagne); out
   .close-meta { flex-direction: column; align-items: center; text-align: center; gap: 28px; }
   .close-lockup { flex-direction: column; gap: 22px; }
   .editorial-inset { width: 52%; margin: -16% 0 0 auto; }
-  .founders img { aspect-ratio: 16 / 11; }
+  .founders img { aspect-ratio: 2100 / 1180; }
 }
 
 /* Static capture mode (?static=1): settle everything instantly */
