@@ -123,6 +123,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 #heroLine { display: block; height: 100%; width: 0; background: var(--champagne); transition: width 2.4s var(--ease); }
 .hero-sub { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.5vw, 30px); line-height: 1.48; margin-bottom: 58px; }
 .hero-meta, .close-meta { display: flex; justify-content: center; gap: clamp(36px, 8vw, 130px); text-align: left; flex-wrap: wrap; }
+.hero-meta { text-align: center; }
+.hero-meta > div { min-width: min(260px, 100%); }
 .meta-label { display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: var(--stone); margin-bottom: 8px; }
 .meta-value { display: block; font-weight: 800; font-size: 17px; }
 .meta-small { display: block; font-size: 13px; color: var(--stone); margin-top: 4px; }
@@ -223,7 +225,9 @@ h2.wide { max-width: 18ch; margin-bottom: clamp(46px, 7vh, 82px); }
 
 /* Why Inhaus */
 .founders { overflow: hidden; margin-bottom: clamp(48px, 8vh, 88px); }
-.founders img { width: 100%; aspect-ratio: 21 / 10; object-fit: cover; }
+.founders.reveal-img { clip-path: none; }
+.founders.reveal-img img { transform: none; }
+.founders img { display: block; width: 100%; height: auto; object-fit: contain; }
 .why-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(36px, 6vw, 90px); align-items: start; }
 .why-grid .lead { max-width: 32ch; }
 .founders-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
