@@ -5,6 +5,14 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
     /(^|[?&])static=1/.test(window.location.search);
 
+  document.querySelectorAll('img[src$=".webp"]').forEach(function (img) {
+    img.addEventListener('error', function () {
+      if (img.dataset.fallbackTried) return;
+      img.dataset.fallbackTried = '1';
+      img.src = img.src.replace(/\.webp(\?.*)?$/, '.jpg$1');
+    });
+  });
+
   if (/(^|[?&])static=1/.test(window.location.search)) {
     document.documentElement.classList.add('no-motion');
   }
